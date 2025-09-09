@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desing And Technology</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Iconos (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <h1>Desing And Technology</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#sobre">Sobre Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <h2>¡Bienvenido a nuestra tienda!</h2>
+    <p>Productos de calidad, estilo y confianza a tu alcance.</p>
+    <a class="boton whatsapp" href="https://wa.me/595986918645" target="_blank">
+      <i class="fab fa-whatsapp"></i> Escríbenos
+    </a>
+  </section>
+
+  <!-- Sección Tienda -->
+  <section id="tienda">
+    <h2>Catálogo de Productos</h2>
+
+    <!-- Buscador -->
+    <input type="text" id="buscador" placeholder="Buscar productos...">
+
+    <div class="grid-productos" id="lista-productos">
+
+      <!-- Producto 1 -->
+      <div class="producto" data-nombre="cartera mujer">
+        <img src="images/cartera.jpg" alt="Cartera Mujer">
+        <h3>Cartera Mujer</h3>
+        <p>Precio: 120.000 Gs</p>
+        <a class="boton whatsapp" href="https://wa.me/595986918645" target="_blank">
+          <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+        </a>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto" data-nombre="gorra deportiva">
+        <img src="images/gorra.jpg" alt="Gorra Deportiva">
+        <h3>Gorra Deportiva</h3>
+        <p>Precio: 55.000 Gs</p>
+        <a class="boton whatsapp" href="https://wa.me/595986918645" target="_blank">
+          <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+        </a>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto" data-nombre="termo personalizado">
+        <img src="images/termo.jpg" alt="Termo personalizado">
+        <h3>Termo Personalizado</h3>
+        <p>Precio: 95.000 Gs</p>
+        <a class="boton whatsapp" href="https://wa.me/595986918645" target="_blank">
+          <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+        </a>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto" data-nombre="taza sublimada">
+        <img src="images/taza.jpg" alt="Taza sublimada">
+        <h3>Taza Sublimada</h3>
+        <p>Precio: 35.000 Gs</p>
+        <a class="boton whatsapp" href="https://wa.me/595XXXXXXXX" target="_blank">
+          <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+        </a>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto" data-nombre="cartera de mano">
+        <img src="images/cartera2.jpg" alt="Cartera de mano">
+        <h3>Cartera de Mano</h3>
+        <p>Precio: 140.000 Gs</p>
+        <a class="boton whatsapp" href="https://wa.me/595XXXXXXXX" target="_blank">
+          <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+        </a>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="producto" data-nombre="accesorio de vehiculo">
+        <img src="images/accesorio.jpg" alt="Accesorio de vehículo">
+        <h3>Accesorio de Vehículo</h3>
+        <p>Precio: 80.000 Gs</p>
+        <a class="boton whatsapp" href="https://wa.me/595XXXXXXXX" target="_blank">
+          <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección Sobre Nosotros -->
+  <section id="sobre" class="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      Somos un emprendimiento familiar dedicado a ofrecer productos de calidad, estilo y confianza.
+      Nos enfocamos en dar una excelente experiencia de compra a cada cliente.
+    </p>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Itá, Paraguay</p>
+    <p>📧 contacto@desingtech.com</p>
+    <p>📱 +595 9XX XXX XXX</p>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Desing And Technology - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Script buscador -->
+  <script>
+    const buscador = document.getElementById("buscador");
+    const productos = document.querySelectorAll(".producto");
+
+    buscador.addEventListener("keyup", () => {
+      const texto = buscador.value.toLowerCase();
+      productos.forEach(prod => {
+        const nombre = prod.getAttribute("data-nombre");
+        prod.style.display = nombre.includes(texto) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
